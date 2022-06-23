@@ -30,5 +30,17 @@ public class MapProgram {
         for (String key: languages.keySet()) {
             System.out.println(key + ": " + languages.get(key));
         }
+        System.out.println("#################################");
+
+        // Removing a pair returns a boolean
+        // Removing just a key will return the value
+        if (languages.remove("BASIC", "Beginners All Purposes Symbolic Instruction Code")) {
+            System.out.println("BASIC removed");
+        } else {
+            System.out.println("Key/Value pair does not exist");
+        }
+        for (String key: languages.keySet()) {
+            System.out.println(key + ": " + languages.get(key));
+        }
     }
 }
